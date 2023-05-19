@@ -1,0 +1,10 @@
+body {
+
+    /* 让页面始终占据浏览器可视区域总高度 */
+    height: 100vh;
+    /* 背景 */
+    background-image: url(../images/fire.png);
+
+    background-size: cover;
+    color: #e3e3e3;
+}
