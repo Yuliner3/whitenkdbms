@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="icon" href="../static/images/dog.ico">
+    <script src="../static/js/jquery.min.js"></script>
+    <script language="JavaScript">
+        function userRegister() {
+            $('#regForm').submit();
+
+        }
+    </script>
+</head>
+<body>
+    <div class="register">
+        <h2>用户注册</h2>
+        <form id="regForm"  action="/account/userRegister" method="get">
+            <div class="reg_box">
+                <label>用户名：</label>
+                <input type="text" name="username" required="required"/>
+                <!-- required就是不能为空，必须在css效果中有很大的作用 -->
+
+            </div>
+            <div class="reg_box">
+                <label>密码：</label>
+                <input type="password" name="password" required="required"/>
+            </div>
+            <div class="reg_box">
+                <label>电话：</label>
+                <input type="text" name="telephone" required="required"/>
+            </div>
+            <div class="reg_box">
+                <label>邮箱：</label>
+                <input type="text" name="email" />
+            </div>
+
+
+        </form>
+        <a href="javascript:void(0)" onclick="userRegister();">
+            注册
+
+        </a>
+
+
+    </div>
+
+</body>
+</html>

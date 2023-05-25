@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DQLTest</title>
+    <link rel="icon" href="../static/images/dog.ico">
+    <script src="../static/js/jquery.min.js"></script>
+    <script language="JavaScript">
+        function selectDBList() {
+            $('#selectDBForm').submit();
+        }
+        function selectUserList() {
+            $('#selectUserForm').submit();
+        }
+        function selectTableList() {
+            $('#selectTableForm').submit();
+        }
+
+    </script>
+</head>
+<body>
+    <form id="selectUserForm" action="/dql/selectUserList" method="get">
+        <a href="javascript:void(0)" onclick="selectUserList();">查询所有用户</a>
+    </form>
+    <form id="selectDBForm" action="/dql/selectDBList" method="get">
+        <a href="javascript:void(0)" onclick="selectDBList();">查询所有数据库</a>
+    </form>
+    <form id="selectTableForm" action="/dql/selectTableList" method="get">
+        <a href="javascript:void(0)" onclick="selectTableList();">查询所有表</a>
+    </form>
+</body>
+</html>
