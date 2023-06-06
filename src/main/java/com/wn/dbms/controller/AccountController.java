@@ -60,10 +60,11 @@ public class AccountController {
                            @RequestParam("username") String username,
                            @RequestParam("password") String password,
                            @RequestParam("telephone") String tel,
-                           @RequestParam("email") String email){
+                           @RequestParam("email") String email,
+                           @RequestParam("host") String host){
         HttpSession session = request.getSession();
-        User user = new User(username,password,tel,email);
-        log.warn("========>{}",user.toString());
+        User user = new User(username,password,tel,email,host);
+        // log.warn("========>{}",user.toString());
         Integer insertResult =  accountService.register(user);
 
         if(!insertResult.equals(0)){
