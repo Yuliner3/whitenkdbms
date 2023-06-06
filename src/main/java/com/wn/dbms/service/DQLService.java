@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Slf4j
@@ -33,11 +34,11 @@ public class DQLService{
         queryWrapper.eq("u_id",id);
         User queryResult = userMapper.selectOne(queryWrapper);
         if(queryResult != null){
-            return queryResult;
+            log.warn("List====>{}",queryResult);
         }else{
-            return null;
+            log.warn("====>{}","query null");
         }
-
+        return queryResult;
     }
 
     /**
@@ -47,10 +48,11 @@ public class DQLService{
     public List<User> selectUserList() {
         List<User> userList = userMapper.selectList(null);
         if(userList != null){
-            return userList;
+            log.warn("List====>{}",userList);
         }else{
-            return null;
+            log.warn("====>{}","query null");
         }
+        return userList;
     }
     /**
      * 查询所有数据库列表
@@ -59,10 +61,11 @@ public class DQLService{
     public List<Database> selectDBList() {
         List<Database> dbList = databaseMapper.selectList(null);
         if(dbList != null){
-            return dbList;
+            log.warn("List====>{}",dbList);
         }else{
-            return null;
+            log.warn("====>{}","query null");
         }
+        return dbList;
     }
     /**
      * 查询所有表列表
@@ -71,10 +74,11 @@ public class DQLService{
     public List<Table> selectTableList() {
         List<Table> tables = tableMapper.selectList(null);
         if(tables != null){
-            return tables;
+            log.warn("List====>{}",tables);
         }else{
-            return null;
+            log.warn("====>{}","query null");
         }
+        return tables;
     }
     /**
      * 查询所有查询列表

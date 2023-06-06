@@ -32,10 +32,12 @@ public class AccountService {
         queryWrapper.eq("u_account", username).eq("u_password", password);
 
         User user = userMapper.selectOne(queryWrapper);
-        log.warn("=========> {}", user.getUEmail());
-
+        if(user != null){
+            log.warn("========>{}",user.toString());
+        }else{
+            log.warn("========>{}","账号密码错误！");
+        }
         return user;
-
     }
 
     /**
