@@ -15,5 +15,4 @@ public class View {
     @TableId(type = IdType.AUTO)
     private Integer vId;
     private String vName;
-    private Integer dId;
 }

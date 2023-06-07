@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 @Slf4j
@@ -15,6 +16,36 @@ public class AccountService {
 
     @Autowired
     UserMapper userMapper;
+
+    /**
+     * 查询库中所有用户信息
+     * @return
+     */
+    public List<User> selectUserList() {
+        List<User> userList = userMapper.selectList(null);
+        if(userList != null){
+            log.warn("List====>{}",userList);
+        }else{
+            log.warn("====>{}","query null");
+        }
+        return userList;
+    }
+    /**
+     * 根据id查询User，作为工具方法使用
+     * @param id
+     * @return
+     */
+    public User selectUserById(Integer id){
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("u_id",id);
+        User queryResult = userMapper.selectOne(queryWrapper);
+        if(queryResult != null){
+            log.warn("List====>{}",queryResult);
+        }else{
+            log.warn("====>{}","query null");
+        }
+        return queryResult;
+    }
 
     /**
      * 用户登录
@@ -87,6 +118,11 @@ public class AccountService {
 
     }
 
+    /**
+     * 依据用户ID删除用户
+     * @param integer
+     * @return
+     */
     public Integer deleteUserById(Integer integer) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("u_id",integer);
