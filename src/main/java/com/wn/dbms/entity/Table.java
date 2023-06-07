@@ -16,6 +16,4 @@ public class Table {
     private Integer tId;
     private String tName;
     private String tDesc;
-    private Integer dId;
-    private Integer uId;
 }

@@ -16,5 +16,5 @@ public class Database {
     private Integer dId;
     private String dName;
     private String dCharset;
-    private Integer uId;
+
 }

@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <title>DQLTest</title>
     <link rel="icon" href="../static/images/dog.ico">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script src="../static/js/jquery.min.js"></script>
     <script src="../static/js/dql.js"></script>
 </head>
 <body>
+    <div class="container">
+        <a href="javascript:void(0)" onclick="selectUserList();">查询所有用户</a><br>
+        <div class="userList"></div>
 
-    <a href="javascript:void(0)" onclick="selectUserList();">查询所有用户</a><br>
-    <div class="userList"></div>
-    <a href="javascript:void(0)" onclick="selectDBList();">查询所有数据库</a><br>
-    <div class="dbList"></div>
-    <a href="javascript:void(0)" onclick="selectTableList();">查询所有表</a><br>
-    <div class="tableList"></div>
+        <a href="javascript:void(0)" onclick="selectDBList();">查询所有数据库</a><br>
+        <div class="dbList"></div>
+
+        <a href="javascript:void(0)" onclick="selectTableList();">查询所有表</a><br>
+        <div class="tableList"></div>
+
+        <a href="javascript:void(0)" onclick="selectQueryList();">查询所有查询</a><br>
+        <div class="queryList"></div>
+
+        <a href="javascript:void(0)" onclick="selectFunList();">查询所有函数</a><br>
+        <div class="funList"></div>
+
+        <a href="javascript:void(0)" onclick="selectRightList();">查询所有权限</a><br>
+        <div class="rightList"></div>
+
+        <a href="javascript:void(0)" onclick="selectViewList();">查询所有视图</a><br>
+        <div class="viewList"></div>
+
+        <a href="javascript:void(0)" onclick="selectTableFieldList();">查询表所有字段</a><br>
+        <div class="tableFieldList"></div>
+    </div>
 </body>
 </html>

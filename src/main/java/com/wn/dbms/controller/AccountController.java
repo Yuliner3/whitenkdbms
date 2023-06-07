@@ -2,7 +2,7 @@ package com.wn.dbms.controller;
 
 import com.wn.dbms.entity.User;
 import com.wn.dbms.service.AccountService;
-import com.wn.dbms.service.DQLService;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+
 @Slf4j
 @Controller
 @RequestMapping("/account")
@@ -19,8 +20,7 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    @Autowired
-    DQLService dqlService;
+
 
     /**
      * 用户登录
@@ -94,7 +94,7 @@ public class AccountController {
         Integer updateResult = accountService.updatePwdById(password,integer);
         if(!updateResult.equals(0)){
             session.setAttribute("updateMsg","更新成功");
-            updateUserResult = dqlService.selectUserById(integer);
+            updateUserResult = accountService.selectUserById(integer);
             session.setAttribute("afterUpdateUser",updateUserResult);
         }else{
             session.setAttribute("updateMsg","更新失败");
@@ -115,7 +115,7 @@ public class AccountController {
         HttpSession session = request.getSession();
         Integer integer = Integer.parseInt(id);
         Integer delResult = accountService.deleteUserById(integer);
-        User deleteUserResult = dqlService.selectUserById(integer);
+        User deleteUserResult = accountService.selectUserById(integer);
         if(delResult.equals(1)){
             if(deleteUserResult == null){
                 session.setAttribute("deleteMsg","删除成功！");

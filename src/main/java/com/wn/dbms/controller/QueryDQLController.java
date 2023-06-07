@@ -1,8 +1,7 @@
 package com.wn.dbms.controller;
 
-import com.wn.dbms.entity.User;
-
-import com.wn.dbms.service.AccountService;
+import com.wn.dbms.entity.Query;
+import com.wn.dbms.service.QueryDQLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,13 +11,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/dql")
-public class DQLController {
+public class QueryDQLController {
     @Autowired
-    AccountService accountService;
+    QueryDQLService queryDQLService;
 
-    @GetMapping("/selectUserList")
-    public List<User> selectUserList(){
-        return accountService.selectUserList();
+    @GetMapping("/selectQueryList")
+    public List<Query> selectQueryList(){
+        return queryDQLService.selectQueryList();
     }
 
 }

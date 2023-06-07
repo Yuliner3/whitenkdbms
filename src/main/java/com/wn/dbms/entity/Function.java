@@ -15,6 +15,6 @@ public class Function {
     @TableId(type = IdType.AUTO)
     private Integer fId;
     private String fName;
-    private Integer dId;
+
 
 }

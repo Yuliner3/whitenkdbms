@@ -16,6 +16,6 @@ public class Right {
     private Integer rId;
     private String rName;
     private String rDesc;
-    private Integer uId;
+
 
 }

@@ -17,8 +17,8 @@
         <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,6 +72,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WndbmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="wndbms" />
       <extension name="coverage">
@@ -134,7 +145,8 @@
       <workItem from="1685684944047" duration="9711000" />
       <workItem from="1685927208899" duration="5011000" />
       <workItem from="1685941890611" duration="9618000" />
-      <workItem from="1686029679908" duration="2126000" />
+      <workItem from="1686029679908" duration="8518000" />
+      <workItem from="1686099048744" duration="6552000" />
     </task>
     <servers />
   </component>

@@ -10,11 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@TableName("q_query")
-public class Query {
+@TableName("table_field")
+public class TableField {
     @TableId(type = IdType.AUTO)
-    private Integer qId;
-    private String qName;
+    private Integer tfId;
+    private String fieldName;
+    private String fieldType;
+    private String fieldConstraint;
 
 
 }
