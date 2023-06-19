@@ -17,8 +17,8 @@
         <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -72,17 +72,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WndbmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="wndbms" />
       <extension name="coverage">
@@ -147,6 +136,19 @@
       <workItem from="1685941890611" duration="9618000" />
       <workItem from="1686029679908" duration="8518000" />
       <workItem from="1686099048744" duration="6552000" />
+      <workItem from="1686115609992" duration="6780000" />
+      <workItem from="1686184301345" duration="6786000" />
+      <workItem from="1686201244615" duration="10109000" />
+      <workItem from="1686271482249" duration="4422000" />
+      <workItem from="1686531178417" duration="7627000" />
+      <workItem from="1686616315941" duration="4472000" />
+      <workItem from="1686638724974" duration="5933000" />
+      <workItem from="1686703019049" duration="1749000" />
+      <workItem from="1686789051417" duration="10115000" />
+      <workItem from="1686806364677" duration="4253000" />
+      <workItem from="1686876926286" duration="9412000" />
+      <workItem from="1686893477237" duration="10527000" />
+      <workItem from="1687135403968" duration="9035000" />
     </task>
     <servers />
   </component>
