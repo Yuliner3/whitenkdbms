@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace为映射的地址，也就是只有在这个接口中才能使用下边的内容-->
+<mapper namespace="com.wn.dbms.mapper.TableFieldMapper">
+    <!-- id 外部为调用的名字 resultType 为和数据库表中映射的类名，parameterType就是传递进来的参数id的类型-->
+
+    <update id="addTableFieldByNoKey" parameterType="String">
+        alter table ${tableName}
+        add column ${fieldName} ${fieldType}(${fieldLength}) ${ifNull}
+        comment #{fieldDesc}
+    </update>
+    <update id="addTableFieldByKey" parameterType="String">
+        alter table ${tableName}
+        add column ${fieldName} ${fieldType}(${fieldLength}) ${ifNull} primary key (${key})
+        comment #{fieldDesc}
+    </update>
+
+
+    <update id="createTableByNoKey" parameterType="String">
+        create table ${tableName}(
+            ${fieldName} ${fieldType}(${fieldLength}) ${ifNull} comment #{fieldDesc}
+        )
+    </update>
+    <update id="createTableByKey" parameterType="String">
+        create table ${tableName}(
+            ${fieldName} ${fieldType}(${fieldLength}) ${ifNull} comment #{fieldDesc},
+            primary key (${key})
+        )
+    </update>
+</mapper>
